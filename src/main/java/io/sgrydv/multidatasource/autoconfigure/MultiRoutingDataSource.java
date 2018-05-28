@@ -2,9 +2,9 @@ package io.sgrydv.multidatasource.autoconfigure;
 
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 
-public class MultiDataSource extends AbstractRoutingDataSource{
+public class MultiRoutingDataSource extends AbstractRoutingDataSource{
     @Override
     protected Object determineCurrentLookupKey() {
-        return DataSourceResolver.getDataSourceId();
+        return DataSourceResolver.getDatasourceId();
     }
 }
